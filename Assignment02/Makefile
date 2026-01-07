@@ -2,7 +2,7 @@
 VERSION = 6
 PATCHLEVEL = 19
 SUBLEVEL = 0
-EXTRAVERSION = -rc4
+EXTRAVERSION = -thor_kernel
 NAME = Baby Opossum Posse
 
 # *DOCUMENTATION*
