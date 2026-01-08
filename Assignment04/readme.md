@@ -42,22 +42,18 @@ make
 ### Étape 2 : Installation Système
 Pour que le mécanisme de Hotplug fonctionne, le binaire .ko doit être placé dans l'arborescence officielle.
 
-# 1. Création du dossier de destination (convention LFS/Ubuntu)
+#### 1. Création du dossier de destination (convention LFS/Ubuntu)
 sudo mkdir -p /lib/modules/$(uname -r)/extra
 
-# 2. Copie du module
+#### 2. Copie du module
 sudo cp main.ko /lib/modules/$(uname -r)/extra/
 
-# 3. Mise à jour de la base de données des alias (CRUCIAL)
+#### 3. Mise à jour de la base de données des alias
+```bash 
 sudo depmod -a
-
-### Étape 3 : Vérification de l'indexation
-Avant le test physique, vérifiez que depmod a bien extrait l'alias de votre module :
-```bash
-grep "main" /lib/modules/$(uname -r)/modules.alias
 ```
 
-### Etape 4: Tester en branchant différent devices
+### Etape 3: Tester en branchant différent devices
 Pour notre evaluation nous utilisont Qemu afin de simuler un branchement de différents périphérique.
 ```bash
 qemu-system-x86_64 \
