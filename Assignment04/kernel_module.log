@@ -1,0 +1,56 @@
+[    1.230697] systemd[1]: Starting Load udev Rules from Credentials...
+[    1.231851] systemd-journald[164]: Collecting audit messages is enabled.
+[    1.231911] systemd[1]: Starting Coldplug All udev Devices...
+[    1.235075] systemd[1]: Mounted Huge Pages File System.
+[    1.235709] systemd[1]: Mounted POSIX Message Queue File System.
+[    1.236227] systemd[1]: Mounted Kernel Debug File System.
+[    1.238168] systemd[1]: Mounted Kernel Trace File System.
+[    1.240141] systemd[1]: Started Journal Service.
+[    1.283153] hid-generic 0003:0627:0001.0002: input,hidraw1: USB HID v1.11 Keyboard [QEMU QEMU USB Keyboard] on usb-0000:00:04.0-2/input0
+[    1.394595] EXT4-fs (sda4): re-mounted 136a72be-3f5c-4e94-9e01-ceeab7e58c72 r/w.
+[    1.395087] usb 1-3: new high-speed USB device number 4 using xhci_hcd
+[    1.417979] systemd-journald[164]: Received client request to flush runtime journal.
+[    1.421823] systemd-journald[164]: File /var/log/journal/d32751a6f1954d3abf9cccc8de1a5b69/system.journal corrupted or uncleanly shut down, renaming and replacing.
+[    1.466865] e1000 0000:00:03.0 ens3: renamed from eth0
+[    1.479518] e1000: ens3 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+[    1.513738] Adding 2097148k swap on /dev/sda3.  Priority:1 extents:1 across:2097148k 
+[    1.520705] usb 1-3: New USB device found, idVendor=0627, idProduct=0001, bcdDevice= 0.00
+[    1.521067] usb 1-3: New USB device strings: Mfr=1, Product=2, SerialNumber=9
+[    1.521206] usb 1-3: Product: QEMU USB Mouse
+[    1.521307] usb 1-3: Manufacturer: QEMU
+[    1.521370] usb 1-3: SerialNumber: 89126-0000:00:04.0-3
+[    1.522192] input: QEMU QEMU USB Mouse as /devices/pci0000:00/0000:00:04.0/usb1/1-3/1-3:1.0/0003:0627:0001.0003/input/input6
+[    1.522450] hid-generic 0003:0627:0001.0003: input,hidraw2: USB HID v0.01 Mouse [QEMU QEMU USB Mouse] on usb-0000:00:04.0-3/input0
+[    1.526845] main: loading out-of-tree module taints kernel.
+[    1.527155] Hello world!.
+[    2.251249] EXT4-fs (sda2): mounted filesystem d692061e-ab2e-42a4-a3aa-03ceb03f32cf r/w with ordered data mode. Quota mode: none.
+[   18.790813] systemd-journald[164]: File /var/log/journal/d32751a6f1954d3abf9cccc8de1a5b69/user-1000.journal corrupted or uncleanly shut down, renaming and replacing.
+[   24.209107] Cleaning up module.
+[   87.869719] usb 1-3: USB disconnect, device number 4
+[   94.589516] usb 1-2: USB disconnect, device number 3
+[  105.725016] usb 1-4: new high-speed USB device number 5 using xhci_hcd
+[  105.848864] usb 1-4: New USB device found, idVendor=0627, idProduct=0001, bcdDevice= 0.00
+[  105.849050] usb 1-4: New USB device strings: Mfr=1, Product=2, SerialNumber=9
+[  105.849136] usb 1-4: Product: QEMU USB Mouse
+[  105.849220] usb 1-4: Manufacturer: QEMU
+[  105.849303] usb 1-4: SerialNumber: 89126-0000:00:04.0-4
+[  105.850219] input: QEMU QEMU USB Mouse as /devices/pci0000:00/0000:00:04.0/usb1/1-4/1-4:1.0/0003:0627:0001.0004/input/input7
+[  105.850518] hid-generic 0003:0627:0001.0004: input,hidraw1: USB HID v0.01 Mouse [QEMU QEMU USB Mouse] on usb-0000:00:04.0-4/input0
+[  122.020265] usb 1-3: new high-speed USB device number 6 using xhci_hcd
+[  122.144060] usb 1-3: New USB device found, idVendor=0627, idProduct=0001, bcdDevice= 0.00
+[  122.144220] usb 1-3: New USB device strings: Mfr=1, Product=4, SerialNumber=11
+[  122.144323] usb 1-3: Product: QEMU USB Keyboard
+[  122.144382] usb 1-3: Manufacturer: QEMU
+[  122.144434] usb 1-3: SerialNumber: 68284-0000:00:04.0-3
+[  122.145257] input: QEMU QEMU USB Keyboard as /devices/pci0000:00/0000:00:04.0/usb1/1-3/1-3:1.0/0003:0627:0001.0005/input/input8
+[  122.228826] hid-generic 0003:0627:0001.0005: input,hidraw2: USB HID v1.11 Keyboard [QEMU QEMU USB Keyboard] on usb-0000:00:04.0-3/input0
+[  122.231338] Hello world!.
+[  206.842923] usb 1-3: USB disconnect, device number 6
+[  209.490847] usb 1-2: new high-speed USB device number 7 using xhci_hcd
+[  209.614003] usb 1-2: New USB device found, idVendor=0627, idProduct=0001, bcdDevice= 0.00
+[  209.614159] usb 1-2: New USB device strings: Mfr=1, Product=4, SerialNumber=11
+[  209.614279] usb 1-2: Product: QEMU USB Keyboard
+[  209.614339] usb 1-2: Manufacturer: QEMU
+[  209.614398] usb 1-2: SerialNumber: 68284-0000:00:04.0-2
+[  209.615049] input: QEMU QEMU USB Keyboard as /devices/pci0000:00/0000:00:04.0/usb1/1-2/1-2:1.0/0003:0627:0001.0006/input/input9
+[  209.698215] hid-generic 0003:0627:0001.0006: input,hidraw2: USB HID v1.11 Keyboard [QEMU QEMU USB Keyboard] on usb-0000:00:04.0-2/input0
