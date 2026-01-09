@@ -40,3 +40,6 @@ Intégration | Quotidien | Le code est fusionné dans Linux-Next. | Test d'inté
 Merge Window | 2 semaines | Linus Torvalds fusionne Linux-Next dans Mainline. | Version RC1 (Release Candidate)
 Stabilisation | 7-8 semaines | Corrections de bugs uniquement (rc2 -> rc8). | Stabilisation
 Release | Jour J | La version finale sort (ex: 6.13). | Stable
+
+## Note
+Url ou trouver le kernel linux-next: https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/
