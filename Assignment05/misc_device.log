@@ -1,0 +1,6 @@
+[  321.923306] Misc_register.
+[  344.330360] Read operation invoked: Login is vburton
+[  355.673990] Unsuccessful login: coucou
+[  367.825422] Successful login: vburton
+[  367.825493] User logged in successfully.
+[  412.715284] Cleaning up module and misc_device.
