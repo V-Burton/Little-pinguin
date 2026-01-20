@@ -1,8 +1,12 @@
 
-obj-m += ft_debugfs.o
+obj-m += ft_debugfs_module.o
+
+ft_debugfs_module-y := ft_debugfs.o foo.o jiffies.o id.o
+
+KERNELDIR ?= /lib/modules/$(shell uname -r)/build
 
 all:
-	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
+	make -C $(KERNELDIR) M=$(PWD) modules
 
 clean:
-	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean
+	make -C $(KERNELDIR) M=$(PWD) clean

@@ -1,0 +1,2 @@
+# Ressources
+https://embetronicx.com/tutorials/linux/device-drivers/linux-device-driver-tutorial-mutex-in-linux-kernel/#Prerequisites

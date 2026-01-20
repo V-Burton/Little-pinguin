@@ -1,0 +1,43 @@
+==================================================
+   RAPPORT DE PREUVES - ASSIGNMENT 07 (DebugFS)
+   Généré le : Tue Jan 20 13:39:56 CET 2026
+   Utilisateur : root
+==================================================
+SUCCÈS : Module ft_debugfs inséré.
+SUCCÈS : Permissions appliquées sur /sys/kernel/debug/fortytwo.
+
+[2] Vérification des modes et propriétaires...
+Fichier: /sys/kernel/debug/fortytwo/foo | Mode: 644 | Owner: root
+Fichier: /sys/kernel/debug/fortytwo/id | Mode: 666 | Owner: root
+Fichier: /sys/kernel/debug/fortytwo/jiffies | Mode: 444 | Owner: root
+
+[3] TEST : Fichier 'id' (Permissions attendues: 0666)
+--- Tentative d'écriture (vburton) ---
+vburton_id
+--- Lecture du résultat ---
+vburton
+[4] TEST : Fichier 'jiffies' (Permissions attendues: 0444)
+--- Lecture 1 ---
+4301172692
+--- Lecture 2 (après 1s) ---
+4301173694
+--- Tentative d'écriture (doit échouer) ---
+12345
+
+[5] TEST : Fichier 'foo' (Permissions attendues: 0644)
+--- Tentative d'écriture par root (doit échouer) ---
+Ceci est un test
+--- Tentative d'écriture par ROOT (doit réussir) ---
+RÉSULTAT : Éécriture root réussie.
+--- Lecture par root (doit réussir) ---
+Donnees_Securisees_Root
+
+[6] TEST : Persistance et Append sur 'foo'
+Contenu final de foo :
+Donnees_Securisees_Root
+ + Suite_de_donnees
+
+[7] Nettoyage et sortie...
+SUCCÈS : Le répertoire /sys/kernel/debug/fortytwo a été supprimé.
+
+--- FIN DU RAPPORT ---

@@ -43,10 +43,10 @@ make
 Pour que le mécanisme de Hotplug fonctionne, le binaire .ko doit être placé dans l'arborescence officielle.
 
 #### 1. Création du dossier de destination (convention LFS/Ubuntu)
-sudo mkdir -p /lib/modules/$(uname -r)/extra
+`sudo mkdir -p /lib/modules/$(uname -r)/extra`
 
 #### 2. Copie du module
-sudo cp main.ko /lib/modules/$(uname -r)/extra/
+`sudo cp main.ko /lib/modules/$(uname -r)/extra/`
 
 #### 3. Mise à jour de la base de données des alias
 ```bash 
@@ -82,7 +82,7 @@ dmesg | tail -n 20
 ### 🔍 Analyse des outils utilisés
 **MODULE_DEVICE_TABLE** : Macro C exportant les IDs du module pour depmod.
 
-**depmod** : Utilitaire analysant les modules pour créer modules.alias.
+**depmod** : Utilitaire analysant les modules pour créer modules.alias. Commande qui permet la reconnaissance du module appelé par le noyau.
 
 **udev** : Démon qui écoute les événements du noyau et déclenche le chargement.
 

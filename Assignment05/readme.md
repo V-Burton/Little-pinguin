@@ -31,10 +31,10 @@ Succès : Le module reste silencieux en espace utilisateur (renvoie le nombre d'
 Échec : Le module renvoie un code d'erreur négatif (-EFAULT), signalant au shell que l'opération a échoué dans le cas d'un echec de `copy_from_user` ou `copy_to_user` ou -EINVAL en cas de mauvais login renseigné.
 
 ## 🚀 Opérations de déploiement
-#### Compilation et Chargement
+#### Compilation et Chargement (préféré être root)
 ```bash
-make
-insmod main.ko
+(sudo) make
+(sudo) insmod main.ko
 ```
 
 #### Tests d'interaction
@@ -71,10 +71,20 @@ Ce module démontre la capacité du noyau à exposer une interface simple à l'u
 
 ## Approfondissement théorique
 ### 1. Le Character Device "Classique" (La méthode lourde)
-Historiquement, pour créer un périphérique, un développeur devait :Réserver un numéro "Major" : Le Major identifie le pilote (ex: 8 pour les disques SCSI, 4 pour les terminaux).Gérer les numéros "Minor" : Le Minor identifie chaque instance (ex: la 1ère partition, la 2ème...).Allouer une plage : Utiliser register_chrdev_region().Initialiser une structure cdev : Faire le lien avec les file_operations.Créer manuellement le nœud : L'utilisateur devait souvent faire mknod /dev/mon_periph c Major Minor.Inconvénient : Il y a un nombre limité de numéros Majors disponibles dans le noyau. Si chaque petit driver demandait son propre Major, le système serait vite saturé.
+- Historiquement, pour créer un périphérique, un développeur devait :
+    -  **Réserver un numéro "Major" :** Le Major identifie le pilote (ex: 8 pour les disques SCSI, 4 pour les terminaux). 
+    - **Gérer les numéros "Minor" :** Le Minor identifie chaque instance (ex: la 1ère partition, la 2ème...).
+    - **Allouer une plage :** Utiliser `register_chrdev_region()`.
+    - **Initialiser une structure `cdev` :** Faire le lien avec les `file_operations`. 
+    - **Créer manuellement le nœud :** L'utilisateur devait souvent faire `mknod /dev/mon_periph c Major Minor`. 
+    - **Inconvénient :** Il y a un nombre limité de numéros Majors disponibles dans le noyau. Si chaque petit driver demandait son propre Major, le système serait vite saturé.
 
 ### 2. Le Misc Device (La méthode légère)
-Le framework miscdevice a été créé pour tous les pilotes qui ne rentrent pas dans une grande catégorie (comme les capteurs, les petits contrôleurs, ou ton exercice).Ses caractéristiques uniques :Major Unique : Tous les misc_devices partagent le même numéro Major : 10.Distinction par le Minor : Ils sont différenciés uniquement par leur numéro Minor.Simplicité : Une seule structure (struct miscdevice) et une seule fonction (misc_register()) font tout le travail.
+- Le framework `miscdevice` a été créé pour tous les pilotes qui ne rentrent pas dans une grande catégorie (comme les capteurs, les petits contrôleurs...). 
+Ses caractéristiques uniques `:Major Unique :` Tous les `misc_devices` partagent le même numéro Major `: 10`.
+- Distinction par le Minor : 
+Ils sont différenciés uniquement par leur numéro Minor.
+- Simplicité : Une seule structure (struct miscdevice) et une seule fonction (misc_register()) font tout le travail.
 
 ### 3. Tableau ComparatifCaractéristique
 | Caractéristique | Character Device Classique | Misc Device Classique |
