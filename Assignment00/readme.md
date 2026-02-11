@@ -32,9 +32,8 @@ grub-mkconfig -o /boot/grub/grub.cfg  # Mise à jour du menu de démarrage
 grep "vmlinuz-torvalds-master" /boot/grub/grub.cfg # Vérification de l'entrée GRUB
 ```
 
-### 6.Génération des livrables (Post-reboot)
+### 6.Check de la prise en compte
 ```bash
-uname -a                        # Vérification de la version active (6.19.0-rc4-g...)
-dmesg > boot.log                # Extraction du journal de démarrage
-cp .config kernel_config.txt    # Copie du fichier de configuration pour rendu
+uname -a
+dmesg
 ```

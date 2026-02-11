@@ -13,13 +13,14 @@
 ### 3. Génération du Patch (Standards Linux)
 - Création d'un commit signé :
   `git add Makefile`
-  `git commit -s -m "kbuild: update EXTRAVERSION to -thor_kernel"`
+  `git commit -s"`
+  - Remplir le git commit avec une description
 - Génération du fichier patch :
   `git format-patch HEAD~1`
 
 ### 4. Vérification du livrable
 - Test de conformité du patch :
-  `./scripts/checkpatch.pl 0001-kbuild-update-EXTRAVERSION-to-thor_kernel.patch`
+  `./scripts/checkpatch.pl 0001-kbuil-change-EXTRAVERSION-to-thor_kernel.patch `
 
 ### 5. Note sur les linux submission standard
 - En tant normal la modification de EXTRAVERSION au profit d'un nom de kernel custom n'est pas permisse et devrait être faite dans la variable `CONFIG_LOCALVERSION` ou `LOCALVERSION`

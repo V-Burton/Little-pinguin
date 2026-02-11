@@ -1,8 +1,5 @@
 # Assignement 07: debugfs
 
-### monter debugf:
-Checker si debugfs est bien monter avec `ls /sys/kernel/debug`.
-Si il y a une sortie c'est bon sinon: `mount -t debugfs none /sys/kernel/debug`
 
 ## 📁 1. Qu'est-ce que DebugFS ?
 **DebugFS** est un système de fichiers virtuel (en RAM) conçu spécifiquement pour le débogage. Contrairement à `/proc` (orienté processus) ou `/sys` (orienté périphériques/modèle objet), **DebugFS** n'a aucune règle stricte : il est là pour que le développeur puisse exposer ce qu'il veut.

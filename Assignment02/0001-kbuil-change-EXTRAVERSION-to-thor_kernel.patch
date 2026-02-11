@@ -1,0 +1,28 @@
+From 4c2bb4e6395ca2b125f0b57ede83aa5d2dba55cc Mon Sep 17 00:00:00 2001
+From: vburton <vburton@42.lyon.fr>
+Date: Wed, 11 Feb 2026 12:00:00 +0100
+Subject: [PATCH] kbuil: change EXTRAVERSION to -thor_kernel
+
+Modification of the EXTRAVERSION vars in the main Makefile
+
+Signed-off-by: vburton <vburton@42.lyon.fr>
+---
+ Makefile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Makefile b/Makefile
+index 83ed80595378..c038715f1b6d 100644
+--- a/Makefile
++++ b/Makefile
+@@ -2,7 +2,7 @@
+ VERSION = 6
+ PATCHLEVEL = 19
+ SUBLEVEL = 0
+-EXTRAVERSION =
++EXTRAVERSION = -thor_kernel
+ NAME = Baby Opossum Posse
+ 
+ # *DOCUMENTATION*
+-- 
+2.50.1
+

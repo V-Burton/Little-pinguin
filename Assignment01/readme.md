@@ -12,3 +12,9 @@ Explication commande: `make -C /lib/modules/$(shell uname -r)/build M=$(PWD) mod
 
 ### Suppression d'un module simple
 `rmmod <mon_module>`
+
+### Source
+Théorie:
+https://kadionik.enseirb-matmeca.fr/linux/kernel_mods.pdf
+Pratique:
+https://tldp.org/LDP/lkmpg/2.6/html/x121.html

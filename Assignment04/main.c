@@ -1,5 +1,6 @@
+// SPDX-License-Identifier: GPL-2.0-only
 /*
- *  main.c - The simplest kernel module.
+ *  The simplest kernel module.
  */
 #include <linux/module.h>
 #include <linux/kernel.h>
@@ -20,7 +21,7 @@ MODULE_DEVICE_TABLE(usb, kbd_table);
 
 static int __init my_init(void)
 {
-	printk(KERN_INFO "Hello world!.\n");
+	pr_info("Hello world!.\n");
 
 	/*
 	 * A non 0 return means init_module failed; module can't be loaded.
@@ -30,7 +31,7 @@ static int __init my_init(void)
 
 static void __exit my_exit(void)
 {
-	printk(KERN_INFO "Cleaning up module.\n");
+	pr_info("Cleaning up module.\n");
 }
 
 

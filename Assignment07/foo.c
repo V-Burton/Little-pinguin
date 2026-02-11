@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: GPL-2.0-only
 /*
  * foo files
  */
@@ -41,6 +42,7 @@ int foo_open(struct inode *inode, struct file *file)
 	if (file->f_flags & O_TRUNC) {
 		current_data_len = 0;
 		i_size_write(inode, 0);
+		memset(my_buffer, 0, PAGE_SIZE);
 		pr_info("Truncated write");
 	} else if (file->f_flags & O_APPEND) {
 		file->f_pos = current_data_len;

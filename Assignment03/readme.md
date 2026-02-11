@@ -49,7 +49,7 @@ Licence (SPDX) : La première ligne de chaque fichier doit indiquer la licence.
 Format : Utilisez /* ... */ pour les commentaires. Pour les fonctions, utilisez le format KernelDoc (/** ... */) juste avant la définition.
 
 ### 6. Affichage des messages
-N'utilisez plus printk(KERN_INFO ...). Préférez les macros modernes qui incluent le contexte :
+Ne plus utiliser printk(KERN_INFO ...). Préférez les macros modernes qui incluent le contexte :
 
 pr_info("Message\n"); (pour un module général)
 
